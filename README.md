@@ -4,16 +4,16 @@
  * @Author: Caoshuangna
  * @Date: 2020-02-24 14:10:31
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-05-15 16:15:52
+ * @LastEditTime: 2021-05-19 14:43:59
  -->
 # big-data-front-vue
 
 
 ### 简介
 
-> 2020/09/07更新
+> 2021/05/19更新
 
-以黄岛大屏为原型的新版大屏展示系统，目前未上线。
+大屏展示系统。
 
 ## Project setup
 ```
