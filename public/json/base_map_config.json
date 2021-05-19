@@ -1,0 +1,141 @@
+[
+  {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": {
+          "color": "#05122aff"
+      }
+  },
+  {
+      "featureType": "highway",
+      "elementType": "all",
+      "stylers": {
+          "visibility": "off"
+      }
+  },
+  {
+      "featureType": "poilabel",
+      "elementType": "all",
+      "stylers": {
+          "visibility": "on"
+      }
+  },
+  {
+      "featureType": "boundary",
+      "elementType": "all",
+      "stylers": {
+          "color": "#05122aff"
+      }
+  },
+  {
+      "featureType": "land",
+      "elementType": "all",
+      "stylers": {
+          "color": "#132647ff"
+      }
+  },
+  {
+      "featureType": "green",
+      "elementType": "all",
+      "stylers": {
+          "color": "#152644ff"
+      }
+  },
+  {
+      "featureType": "manmade",
+      "elementType": "all",
+      "stylers": {
+          "color": "#0e1c35ff"
+      }
+  },
+  {
+      "featureType": "districtlabel",
+      "elementType": "labels.text.stroke",
+      "stylers": {
+          "color": "#ffffff00"
+      }
+  },
+  {
+      "featureType": "building",
+      "elementType": "all",
+      "stylers": {
+          "color": "#172847ff"
+      }
+  },
+  {
+      "featureType": "poilabel",
+      "elementType": "labels.text.fill",
+      "stylers": {
+          "color": "#9fc5e885"
+      }
+  },
+  {
+      "featureType": "poilabel",
+      "elementType": "labels.text.stroke",
+      "stylers": {
+          "color": "#ffffff00"
+      }
+  },
+  {
+      "featureType": "road",
+      "elementType": "labels.icon",
+      "stylers": {
+          "color": "#ffffffff"
+      }
+  },
+  {
+      "featureType": "poilabel",
+      "elementType": "labels.icon",
+      "stylers": {
+          "visibility": "off"
+      }
+  },
+  {
+      "featureType": "local",
+      "elementType": "all",
+      "stylers": {
+          "visibility": "off"
+      }
+  },
+  {
+      "featureType": "railway",
+      "elementType": "all",
+      "stylers": {
+          "visibility": "off"
+      }
+  },
+  {
+      "featureType": "subway",
+      "elementType": "all",
+      "stylers": {
+          "visibility": "off"
+      }
+  },
+  {
+      "featureType": "arterial",
+      "elementType": "all",
+      "stylers": {
+          "color": "#3b5170ff"
+      }
+  },
+  {
+      "featureType": "districtlabel",
+      "elementType": "labels.text.fill",
+      "stylers": {
+          "color": "#ffffff00"
+      }
+  },
+  {
+      "featureType": "town",
+      "elementType": "labels.text.fill",
+      "stylers": {
+          "color": "#ffffffbd"
+      }
+  },
+  {
+      "featureType": "district",
+      "elementType": "labels.text.fill",
+      "stylers": {
+          "color": "#009effff"
+      }
+  }]
