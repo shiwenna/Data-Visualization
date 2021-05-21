@@ -32,6 +32,7 @@
       <BaseBorderB flex="2">
         <template v-slot:content>
           <heatBaiduMap></heatBaiduMap>
+          <base-indicate-box></base-indicate-box>
         </template>
       </BaseBorderB>
       <BaseDataFloatO flex="1" :listData="[{
@@ -56,13 +57,22 @@
       <!-- <BaseBorderS flex="1"
                    :title='"老年人自理能力占比"'> -->
         <!-- <template v-slot:content> -->
-          <threeQuartersRing></threeQuartersRing>
+          <!-- <threeQuartersRing></threeQuartersRing> -->
         <!-- </template> -->
       <!-- </BaseBorderS> -->
+
+      <!-- <base-top-three>
+      <template v-slot:content>
+      <base-progress></base-progress>
+
+      </template>
+      </base-top-three> -->
+      <!-- <base-tabel-top-5></base-tabel-top-5> -->
+      <base-list-swiper-2 :listData='listData'></base-list-swiper-2>
       <BaseBorderS flex="2"
                    :title='"居家服务订单"'>
         <template v-slot:content>
-          <BaseListSwiper :listData='listData'></BaseListSwiper>
+          <BaseListSwiper :listData='listData'> </BaseListSwiper>
         </template>
       </BaseBorderS>
     </div>
