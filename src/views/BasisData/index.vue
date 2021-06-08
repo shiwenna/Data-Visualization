@@ -15,13 +15,19 @@
             <p class="corona-total-data">65.4km²</p>
           </div>
           <BaseDataBox top='4'
-                       left='0' :title='"西海岸总人口"' :num="'88.7'">
+                       left='0'
+                       :title='"西海岸总人口"'
+                       :num="'88.7'">
           </BaseDataBox>
           <BaseDataBox top='0'
-                       left='13' :title='"老年人口"' :num="'12.9'">
+                       left='13'
+                       :title='"老年人口"'
+                       :num="'12.9'">
           </BaseDataBox>
           <BaseDataBox top='10'
-                       left='13' :title='"老龄化占比"' :num="'14'">
+                       left='13'
+                       :title='"老龄化占比"'
+                       :num="'14'">
           </BaseDataBox>
         </template>
       </BaseBorderS>
@@ -32,10 +38,12 @@
       <BaseBorderB flex="2">
         <template v-slot:content>
           <heatBaiduMap></heatBaiduMap>
-          <base-indicate-box></base-indicate-box>
+          <base-point-1></base-point-1>
+          <base-indicate-box style="left: 60%;top: 28%;" :status="'finished'"></base-indicate-box>
         </template>
       </BaseBorderB>
-      <BaseDataFloatO flex="1" :listData="[{
+      <BaseDataFloatO flex="1"
+                      :listData="[{
           name: '养老设施覆盖率',
           num: '75',
           unit: '%'
@@ -56,9 +64,9 @@
          style="width: 25%;">
       <!-- <BaseBorderS flex="1"
                    :title='"老年人自理能力占比"'> -->
-        <!-- <template v-slot:content> -->
-          <!-- <threeQuartersRing></threeQuartersRing> -->
-        <!-- </template> -->
+      <!-- <template v-slot:content> -->
+      <!-- <threeQuartersRing></threeQuartersRing> -->
+      <!-- </template> -->
       <!-- </BaseBorderS> -->
 
       <!-- <base-top-three>
@@ -96,15 +104,16 @@ export default {
     return {
       eChartsOptions_1: {
       },
-      listData:[]
+      listData: []
     }
   },
   methods: {
-loginIn () {
-      this.$axios.post('/datacenter/datacenter/api/search?lv=1&app_id=81b95d53d1f1f749b2e7bc561dc19830fb224f04&app_secret=7d353f73a6a5764549a7e58df6bffd35',{
+    loginIn () {
+      this.$axios.post('/datacenter/datacenter/api/search?lv=1&app_id=81b95d53d1f1f749b2e7bc561dc19830fb224f04&app_secret=7d353f73a6a5764549a7e58df6bffd35', {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
-        }}).then(
+        }
+      }).then(
         res => {
           if (res && res.code == "200") {
             // if (res.user.userGroup === "OTES_STUDENT") {
@@ -117,7 +126,7 @@ loginIn () {
           }
         },
         err => {
-          
+
           err.msg && this.$message.error(err.msg);
         }
       )
@@ -145,7 +154,7 @@ loginIn () {
             { text: '女', value: '45' }]
         },
       },
-      this.listData=[{
+        this.listData = [{
           name: '王富贵',
           addr: '黄岛区金水路128号社区街道',
           title: '管道维修',
@@ -185,7 +194,7 @@ loginIn () {
         }
         ]
     }, 1000)
-    this.loginIn ();
+    // this.loginIn ();
   }
 }
 </script>

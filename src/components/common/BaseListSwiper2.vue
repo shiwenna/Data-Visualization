@@ -5,7 +5,7 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-14 10:30:07
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-05-20 16:10:24
+ * @LastEditTime: 2021-06-08 16:28:16
  -->
 <template>
   <div :style="styles"
@@ -41,15 +41,7 @@
             <span>2018-04-19</span>
             <span class="order-status">进行中</span>
           </div>
-          <!-- <div class="t-progress">
-            <span class="percent">30%</span> -->
-            <!-- 小于30%添加class名称 less -->
-            <!-- <div class="progress-wrapper less">
-              <div class="progressbar active"
-                   style="width: 30%"></div>
-            </div>
-            <p class="num">数量: <strong>30</strong>&nbsp;/100</p>
-          </div> -->
+          <base-progress :currentProgress="'30%'" ></base-progress>
         </li>
 
         <!-- 已完订单li成添加class名称finished -->
@@ -76,11 +68,13 @@
 import dataDictionary from "@/mixins/data-dictionary";
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import BaseProgress from './BaseProgress.vue';
 export default {
   mixins: [dataDictionary],
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    BaseProgress
   },
   directives: {
     swiper: directive

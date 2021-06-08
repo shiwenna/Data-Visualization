@@ -5,7 +5,7 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-14 10:30:07
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-06-17 16:11:45
+ * @LastEditTime: 2021-05-27 11:47:14
  -->
 <template>
   <div id="container"></div>
@@ -18,21 +18,21 @@ export default {
   props: {
     mapCenterLng: {
       type: [Number],
-      default: 119.995518
+      default: 113.547595
     },
     mapCenterLat: {
       type: [Number],
-      default: 35.875138
+      default: 22.273807
 
     },
     zoom: {
       type: [Number],
-      default: 11
+      default: 12
 
     },
     cityName: {
       type: [String],
-      default: '黄岛区'
+      default: '香洲区'
     },
     // heatPoints: {
     //   type: [Array],
