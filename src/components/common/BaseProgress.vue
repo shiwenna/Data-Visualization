@@ -4,15 +4,15 @@
  * @Author: Caoshuangna
  * @Date: 2021-05-19 15:07:45
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-06-08 16:26:07
+ * @LastEditTime: 2021-06-11 14:05:16
 -->
 <template>
   <div class="t-progress">
     <!-- 小于30%添加class名称 less -->
     <div class="progress-wrapper" :class="currentProgress < minProgress?'less':''">
-      <div class="progressbar active " :style="{ width: currentProgress }"></div>
+      <div class="progressbar active " :style="{ width: `${currentProgress}%` }"></div>
     </div>
-    <span class="percent">{{currentProgress}}</span>
+    <span class="percent">{{currentProgress}}%</span>
   </div>
 </template>
 
@@ -20,12 +20,12 @@
 export default {
   props: {
     currentProgress: {
-      type: String,
-      default: '96.5%'
+      type: Number,
+      default: 96.5
     },
     minProgress: {
-      type: [String, Number],
-      default: '0%'
+      type:  Number,
+      default: 0
     },
   },
   data () {
@@ -169,6 +169,7 @@ export default {
   color: #0ab6fd;
   font-size: 1.4814814815vh;
   font-weight: bold;
+  width: 10%;
 }
 /* 进度条 end */
 </style>

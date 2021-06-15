@@ -38,8 +38,9 @@
       <BaseBorderB flex="2">
         <template v-slot:content>
           <heatBaiduMap></heatBaiduMap>
-          <base-point-1></base-point-1>
-          <base-indicate-box style="left: 60%;top: 28%;" :status="'finished'"></base-indicate-box>
+          <!-- <base-point-1></base-point-1>
+          <base-indicate-box style="left: 60%;top: 28%;" -->
+                             <!-- :status="'finished'"></base-indicate-box> -->
         </template>
       </BaseBorderB>
       <BaseDataFloatO flex="1"
@@ -76,9 +77,15 @@
       </template>
       </base-top-three> -->
       <!-- <base-tabel-top-5></base-tabel-top-5> -->
-      <base-list-swiper-2 :listData='listData'></base-list-swiper-2>
+      <BaseBorderS flex="1"
+                   :title='"服务订单"'>
+        <template v-slot:content>
+          <base-list-swiper-2 :listData='listData'></base-list-swiper-2>
+        </template>
+      </BaseBorderS>
+
       <BaseBorderS flex="2"
-                   :title='"居家服务订单"'>
+                   :title='"服务订单"'>
         <template v-slot:content>
           <BaseListSwiper :listData='listData'> </BaseListSwiper>
         </template>
@@ -108,29 +115,7 @@ export default {
     }
   },
   methods: {
-    loginIn () {
-      this.$axios.post('/datacenter/datacenter/api/search?lv=1&app_id=81b95d53d1f1f749b2e7bc561dc19830fb224f04&app_secret=7d353f73a6a5764549a7e58df6bffd35', {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        }
-      }).then(
-        res => {
-          if (res && res.code == "200") {
-            // if (res.user.userGroup === "OTES_STUDENT") {
-            //   sessionStorage.setItem("stuUser", JSON.stringify(res));
-            //   sessionStorage.setItem('sooId', res.user.sooId)
-            //   this.$router.push('/')
-            // }
-          } else if (res && res.code == "400") {
-            // this.$message.error(res.msg)
-          }
-        },
-        err => {
 
-          err.msg && this.$message.error(err.msg);
-        }
-      )
-    },
   },
   created () {
     setTimeout(() => {
@@ -161,6 +146,8 @@ export default {
           person: '丁春蕾',
           time: '2020-05-06',
           status: '1',
+          current: 100
+
         },
         {
           name: '杨女士',
@@ -169,6 +156,8 @@ export default {
           person: '王贵和',
           time: '2020-06-03',
           status: '2',
+          current: 55
+
         },
         {
           name: '徐红娟',
@@ -177,6 +166,8 @@ export default {
           person: '蒋秀霞',
           time: '2020-06-10',
           status: '3',
+          current: 90
+
         }, {
           name: '李仁娣',
           addr: '黄岛区辽阳路',
@@ -184,6 +175,8 @@ export default {
           person: '徐桂珍',
           time: '2020-06-12',
           status: '4',
+          current: 100
+
         }, {
           name: '吴喜梅',
           addr: '黄岛区合肥路566号',
@@ -191,10 +184,11 @@ export default {
           person: '刘春',
           time: '2020-07-06',
           status: '1',
+          current: 15
+
         }
         ]
     }, 1000)
-    // this.loginIn ();
   }
 }
 </script>

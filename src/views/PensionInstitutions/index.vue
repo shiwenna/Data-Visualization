@@ -34,7 +34,12 @@
       <BaseBorderS style="width: 50%; height: 45%;" :flex="0" :title="'星级养老机构展示'">
         <template v-slot:content>
           <!--<BaseCarousel :imgList="carouselData"></BaseCarousel>-->
-          <BaseSwiper :carouselData="carouselData"></BaseSwiper>
+          <BaseSwiper :carouselData="carouselData" :swiperOptions="{autoplay: true,pagination: { el: '.swiper-pagination' }}">
+          <template v-slot:content>
+      <img :src="item" alt="">
+
+          </template>
+          </BaseSwiper>
         </template>
       </BaseBorderS>
       <InSort :eChartsOptions="eChartsOptions_2" style="width: 100%; height: 55%;"></InSort>

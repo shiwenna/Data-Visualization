@@ -1,10 +1,11 @@
 <!--
- * @Descripttion: 
+ * @Descripttion: 简单图片Swiper封装
+ * @params: swiperOptions：Swiper(4-6)的配置选项，carouselData：数据数组
  * @version: 
  * @Author: Caoshuangna
  * @Date: 2020-06-09 11:23:27
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-06-09 13:46:52
+ * @LastEditTime: 2021-06-11 10:56:18
 --> 
 <template>
   <swiper ref="mySwiper" :options="swiperOptions">
@@ -19,7 +20,7 @@
   import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
   import 'swiper/css/swiper.css'
   export default {
-    name: 'Carousel',
+    name: 'BaseSwiper',
     components: {
       Swiper,
       SwiperSlide
@@ -27,7 +28,15 @@
     props: {
       carouselData: {
         type: Array,
-        default: []
+        default () {
+        return []
+      }
+      },
+      swiperOptions: {
+        type: Object,
+        default () {
+        return {}
+      }
       }
     },
     directives: {
@@ -35,20 +44,15 @@
     },
     data() {
       return {
-        swiperOptions: {
-          pagination: {
-            el: '.swiper-pagination'
-          }
-        }
       }
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper
-      }
+      // swiper() {
+      //   return this.$refs.mySwiper.$swiper
+      // }
     },
     mounted() {
-      this.swiper.slideTo(0, 1000, false)
+      // this.swiper.slideTo(0, 1000, false)
     }
   }
 </script>

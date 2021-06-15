@@ -4,7 +4,7 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-11 11:18:40
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-07-07 13:53:17
+ * @LastEditTime: 2021-06-11 14:07:34
  */
 // 作为配置文件，直接导出配置对象即可
 module.exports = {
@@ -16,18 +16,8 @@ module.exports = {
     clientLogLevel: 'warning',
     // 代理器中设置/api,项目中请求路径为/api的替换为target
     proxy: {
-      '/api/hcss/': {
-        // target: 'http://192.168.30.50:8082/hcss',
-        target: 'http://yl.nxszs.gov.cn/hcss',
-        changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
-        //pathRewrite方法重写url
-        pathRewrite: {
-          '^/api/hcss/': ''
-        }
-      },
       '/api/': {
-        // target: 'http://192.168.30.50:8082/hcss',
-        target: 'https://www.qingdaoyanglao.com',
+        target: 'http://192.168.30.50:8082/hcss',
         changeOrigin: true,// 如果接口跨域，需要进行这个参数配置
         //pathRewrite方法重写url
         pathRewrite: {

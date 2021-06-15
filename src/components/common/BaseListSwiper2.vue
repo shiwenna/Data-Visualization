@@ -5,62 +5,34 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-14 10:30:07
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-06-08 16:28:16
+ * @LastEditTime: 2021-06-11 14:11:19
  -->
 <template>
   <div :style="styles"
        style='overflow: hidden;'>
-    <!-- <swiper ref="mySwiper"
+    <swiper ref="mySwiper"
             :style="styles"
             :options="swiperOptions">
       <swiper-slide v-for="(item,index) in listData"
-                    :key="index"> -->
+                    :key="index">
 
         <!-- 未开始订单li成添加class名称todo -->
-        <li class="list-item todo">
+        <li class="list-item" :class="{1:'todo',2:'',3:'',4:'finished'}[item.status]">
           <div class="order-no">
             <span class="order-icon"></span>
-            <span>订单号</span>
-            <span>ADI225625</span>
-            <p class="customer">客户： <strong>A365</strong></p>
+            <span>订单</span>
+            <span>{{item.title}}</span>
+            <p class="customer">客户： <strong>{{item.name}}</strong></p>
           </div>
           <div class="delivery-time">
-            <span>2018-04-19</span>
-            <span class="order-status">待生产</span>
-            <p class="num">数量: <strong>70</strong>&nbsp;/100</p>
+            <span>{{item.time}}</span>
+            <span class="order-status">{{orderStatusValue[item.status]}}</span>
+            <p class="num">数量: <strong>{{item.current}}</strong>&nbsp;/100</p>
           </div>
+          <base-progress :currentProgress="item.current" :minProgress="60"></base-progress>
         </li>
-        <li class="list-item">
-          <div class="order-no">
-            <span class="order-icon"></span>
-            <span>订单号</span>
-            <span>ADI225625</span>
-            <p class="customer">客户： <strong>A365</strong></p>
-          </div>
-          <div class="delivery-time">
-            <span>2018-04-19</span>
-            <span class="order-status">进行中</span>
-          </div>
-          <base-progress :currentProgress="'30%'" ></base-progress>
-        </li>
-
-        <!-- 已完订单li成添加class名称finished -->
-        <li class="list-item finished">
-          <div class="order-no">
-            <span class="order-icon"></span>
-            <span>订单号</span>
-            <span>ADI225625</span>
-            <p class="customer">客户： <strong>A365</strong></p>
-          </div>
-          <div class="delivery-time">
-            <span>2018-04-19</span>
-            <span class="order-status">已完成</span>
-            <p class="num">数量: <strong>100</strong>&nbsp;/100</p>
-          </div>
-        </li>
-
-      <!-- </swiper-slide>
-    </swiper> -->
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -97,7 +69,7 @@ export default {
         autoplay: true,
         direction: 'vertical',
         slidesPerView: 'auto',
-        spaceBetween: 15,
+        spaceBetween: 5,
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -132,9 +104,9 @@ export default {
  .list-item {
   padding: 1.2037037037vh 0.625vw 0.7407407407vh 0.8854166667vw;
   // margin-bottom: 0.9259259259vh;
-  background-color: #15273f;
-  border: 1px solid #15273f;
-  border-radius: 0.2314814815vh;
+  background-color: rgba(103, 171, 255, 0.2);
+  // border: 1px solid #15273f;
+  border-radius: 10px;
   -webkit-transition: 0.4s ease;
   -o-transition: 0.4s ease;
   transition: 0.4s ease;
