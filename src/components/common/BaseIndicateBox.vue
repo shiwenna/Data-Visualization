@@ -5,17 +5,17 @@
  * @Author: Caoshuangna
  * @Date: 2021-05-21 13:53:32
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-06-08 15:51:21
+ * @LastEditTime: 2021-07-07 14:03:29
 -->
 <template>
-  <div class="line-station active"
-       :class="colorstatus">
-    <!-- <span class="line-station-circle"
-          style="display: inline;"><i></i><span></span></span>
+  <div class="line-station"
+       :class="{[activeclass]:true,[colorstatus]:true}">
+    <span class="line-station-circle">
+      <i></i><span></span></span>
     <div class="line-station-border">
       <svg version="1.1"
            id="图层_3"
-           style="height: 4.5vh;vertical-align: top;"
+           style="height: 6vh;vertical-align: top;"
            xmlns="http://www.w3.org/2000/svg"
            xmlns:xlink="http://www.w3.org/1999/xlink"
            x="0px"
@@ -24,12 +24,11 @@
            enable-background="new 0 0 423.5 121.3"
            xml:space="preserve">
         <g>
-          <path 
-                d="M419.1 121 h-2.3 V16 c0-4.9-4-8.9-8.9-8.9 H2.2 V4.9">
+          <path d="M419.1 121 h-2.3 V16 c0-4.9-4-8.9-8.9-8.9 H2.2 V4.9">
           </path>
         </g>
       </svg>
-    </div> -->
+    </div>
     <div class="line-station-content station-scale">
       <div class="line-station-top">
         <span class="">{{title}}</span>
@@ -88,13 +87,14 @@ export default {
   data () {
     return {
       classType: '',
+      activeclass: '',
 
     }
   },
 
   mounted () {
     this.$nextTick(function () {
-
+      this.activeclass = 'active'
     })
   },
   created () {
@@ -125,11 +125,12 @@ export default {
 .line-station svg g path,
 .line-station svg polyline {
   stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dashoffset: -1000;
   stroke-width: 3;
-  -webkit-transition: stroke-dashoffset 1s;
-  transition: stroke-dashoffset 1s;
+  -webkit-transition: stroke-dashoffset .8s;
+  transition: stroke-dashoffset .8s;
 }
+
 .line-station-circle {
   width: 1.7708333333vw;
   height: 1.7708333333vw;
@@ -137,7 +138,7 @@ export default {
   text-align: center;
   position: absolute;
   z-index: 1;
-  display: none;
+  opacity: 0;
   border-radius: 50%;
   background-color: rgba(42, 188, 253, 0.35);
 }
@@ -250,108 +251,118 @@ export default {
 
 .line-station.active .station-scale {
   height: auto;
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.8s;
+  transition-delay: 0.8s;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
   opacity: 1;
 }
-.line-station.station1 {
-  left: 9.5%;
-  top: 52%;
-}
-.line-station.station1 .line-station-border {
+// .line-station.station1 {
+//   left: 9.5%;
+//   top: 52%;
+// }
+// .line-station.station1 .line-station-border {
+//   position: absolute;
+//   right: 0.625vw;
+//   bottom: 50%;
+//   margin-bottom: -3px;
+//   z-index: 0;
+// }
+// .line-station.station1 .line-station-content {
+//   bottom: 11vh;
+//   left: -17vh;
+// }
+// .line-station.station2 {
+//   left: 23.5%;
+//   top: 69%;
+// }
+// .line-station.station2 .line-station-border {
+//   position: absolute;
+//   right: 0;
+//   top: 0.8854166667vw;
+//   margin-bottom: -3px;
+//   z-index: 0;
+// }
+// .line-station.station2 .line-station-content {
+//   top: 9vh;
+//   right: -4vh;
+// }
+// .line-station.station2 svg g path {
+//   stroke-dashoffset: -1000;
+//   -webkit-transition: stroke-dashoffset 0.6s;
+//   transition: stroke-dashoffset 0.6s;
+// }
+// .line-station.station3 {
+//   left: 46%;
+//   top: 48%;
+// }
+// .line-station.station3 .line-station-border {
+//   position: absolute;
+//   left: 50%;
+//   top: 0.8854166667vw;
+//   margin-bottom: -3px;
+//   z-index: 0;
+// }
+// .line-station.station3 .line-station-content {
+//   top: 7vh;
+//   left: -8vh;
+// }
+// .line-station.station4 {
+//   left: 60%;
+//   top: 28%;
+// }
+.line-station .line-station-border {
   position: absolute;
-  right: 0.625vw;
-  bottom: 50%;
-  margin-bottom: -3px;
+  position: absolute;
+  left: 1vw;
+  top: 0.7vw;
+  /* margin-left: 1.844vw; */
+  /* margin-bottom: 1.844vw; */
   z-index: 0;
 }
-.line-station.station1 .line-station-content {
-  bottom: 11vh;
-  left: -17vh;
+.line-station .line-station-content {
+  top: 4.5vh;
+  right: -32vh;
 }
-.line-station.station2 {
-  left: 23.5%;
-  top: 69%;
-}
-.line-station.station2 .line-station-border {
-  position: absolute;
-  right: 0;
-  top: 0.8854166667vw;
-  margin-bottom: -3px;
-  z-index: 0;
-}
-.line-station.station2 .line-station-content {
-  top: 9vh;
-  right: -4vh;
-}
-.line-station.station2 svg g path {
-  stroke-dashoffset: -1000;
-  -webkit-transition: stroke-dashoffset 0.6s;
-  transition: stroke-dashoffset 0.6s;
-}
-.line-station.station3 {
-  left: 46%;
-  top: 48%;
-}
-.line-station.station3 .line-station-border {
-  position: absolute;
-  left: 50%;
-  top: 0.8854166667vw;
-  margin-bottom: -3px;
-  z-index: 0;
-}
-.line-station.station3 .line-station-content {
-  top: 7vh;
-  left: -8vh;
-}
-.line-station.station4 {
-  left: 60%;
-  top: 28%;
-}
-.line-station.station4 .line-station-border {
-  position: absolute;
-  left: 50%;
-  top: 49%;
-  margin-left: -3px;
-  margin-bottom: -3px;
-  z-index: 0;
-}
-.line-station.station4 .line-station-content {
-  // top: 3.5vh;
-  // right: -32vh;
-}
-.line-station.station4 svg g path {
-  stroke-dashoffset: -1000;
-  -webkit-transition: stroke-dashoffset 0.6s;
-  transition: stroke-dashoffset 0.6s;
-}
+// .line-station svg g path {
+//   stroke-dashoffset: -1000;
+//   -webkit-transition: stroke-dashoffset 1s;
+//   transition: stroke-dashoffset 1s;
+// }
 
 
-.line-station.station5 {
-  left: 48%;
-  top: 24%;
-}
-.line-station.station5 .line-station-border {
-  position: absolute;
-  right: 0.625vw;
-  bottom: 50%;
-  margin-bottom: -3px;
-  z-index: 0;
-}
-.line-station.station5 .line-station-content {
-  bottom: 3vh;
-  left: -20vh;
-}
+// .line-station.station5 {
+//   left: 48%;
+//   top: 24%;
+// }
+// .line-station.station5 .line-station-border {
+//   position: absolute;
+//   right: 0.625vw;
+//   bottom: 50%;
+//   margin-bottom: -3px;
+//   z-index: 0;
+// }
+// .line-station.station5 .line-station-content {
+//   bottom: 3vh;
+//   left: -20vh;
+// }
 
 .line-station.active svg g path,
 .line-station.active svg polyline {
   stroke-dashoffset: 0 ;
+  
 }
 
 .line-station.finished .line-station-circle {
   background-color: rgba(0, 198, 96, 0.35);
+}
+.line-station.active .line-station-circle {
+  transition: all ease-out 0.1s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
 }
 .line-station.finished .line-station-circle i {
   background-color: #01fab7;

@@ -38,9 +38,9 @@
       <BaseBorderB flex="2">
         <template v-slot:content>
           <heatBaiduMap></heatBaiduMap>
-          <!-- <base-point-1></base-point-1>
-          <base-indicate-box style="left: 60%;top: 28%;" -->
-                             <!-- :status="'finished'"></base-indicate-box> -->
+          <base-point-1></base-point-1>
+          <base-indicate-box style="left: 60%;top: 28%;"
+                             :colorstatus="'finished'"></base-indicate-box>
         </template>
       </BaseBorderB>
       <BaseDataFloatO flex="1"
