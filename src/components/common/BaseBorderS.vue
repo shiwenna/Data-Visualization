@@ -5,7 +5,7 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-14 10:30:07
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-05-26 14:32:19
+ * @LastEditTime: 2021-07-07 15:44:34
  -->
 <template>
   <div :style="styles" class="padding">
@@ -71,8 +71,8 @@ h4 {
 padding: 5px 15px;
 }
 .main-details {
-  min-height: 70%;
-  min-width: 200px;
+  // min-height: 70%;
+  // min-width: 200px;
   position: relative;
   border: 1.5em solid transparent;
 }

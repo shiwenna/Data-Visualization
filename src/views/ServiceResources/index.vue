@@ -4,7 +4,7 @@
  * @Author: Caoshuangna
  * @Date: 2020-06-10 15:37:35
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-06-22 14:31:11
+ * @LastEditTime: 2021-07-07 16:32:48
 --> 
 <template>
   <div class="dis-flex"
@@ -105,7 +105,6 @@ export default {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-
   position: absolute;
   width: 110px;
   height: 165px;

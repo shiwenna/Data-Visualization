@@ -5,7 +5,7 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-14 10:30:07
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-06-11 14:11:19
+ * @LastEditTime: 2021-07-07 15:46:17
  -->
 <template>
   <div :style="styles"
@@ -60,7 +60,7 @@ export default {
     },
     maxHeight: {
       type: [String, Number],
-      default: 16
+      default: 7
     },
   },
   data () {

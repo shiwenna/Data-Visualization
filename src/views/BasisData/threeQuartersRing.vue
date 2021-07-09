@@ -4,17 +4,17 @@
  * @Author: Caoshuangna
  * @Date: 2020-05-27 15:53:29
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-06-12 15:27:09
+ * @LastEditTime: 2021-07-07 16:21:09
 --> 
 <template>
-  <BaseBorderS flex="1"
+  <!-- <BaseBorderS flex="1"
                :title='"老年人自理能力占比"'>
-    <template v-slot:content>
+    <template v-slot:content> -->
       <div id="eCharts_3"
            class='eCharts_3'
            style=""></div>
-    </template>
-  </BaseBorderS>
+    <!-- </template>
+  </BaseBorderS> -->
 </template>
     
 <script>
@@ -276,8 +276,8 @@ export default {
 .eCharts_3 {
   width: 400px;
   height: 16vh;
-  margin: 0 auto;
-  position: fixed;
-  top: 19%;
+  // margin: 0 auto;
+  // position: fixed;
+  // top: 19%;
 }
 </style>

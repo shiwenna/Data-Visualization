@@ -63,12 +63,12 @@
     </div>
     <div class="dis-flex dis-flex-column"
          style="width: 25%;">
-      <!-- <BaseBorderS flex="1"
-                   :title='"老年人自理能力占比"'> -->
-      <!-- <template v-slot:content> -->
-      <!-- <threeQuartersRing></threeQuartersRing> -->
-      <!-- </template> -->
-      <!-- </BaseBorderS> -->
+      <BaseBorderS flex="1"
+                   :title='"老年人自理能力占比"'>
+        <template v-slot:content>
+          <threeQuartersRing></threeQuartersRing>
+        </template>
+      </BaseBorderS>
 
       <!-- <base-top-three>
       <template v-slot:content>
@@ -77,12 +77,12 @@
       </template>
       </base-top-three> -->
       <!-- <base-tabel-top-5></base-tabel-top-5> -->
-      <BaseBorderS flex="1"
+      <!-- <BaseBorderS flex="1"
                    :title='"服务订单"'>
         <template v-slot:content>
           <base-list-swiper-2 :listData='listData'></base-list-swiper-2>
         </template>
-      </BaseBorderS>
+      </BaseBorderS> -->
 
       <BaseBorderS flex="2"
                    :title='"服务订单"'>
