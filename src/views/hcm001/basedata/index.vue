@@ -4,7 +4,7 @@
  * @Author: Caoshuangna
  * @Date: 2021-07-27 15:19:55
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-07-30 09:00:48
+ * @LastEditTime: 2021-07-30 09:12:57
 -->
 <template>
   <div>
@@ -49,7 +49,7 @@
       <div class="middle-box">
         <h2>适老化改造数量<span class="title-num">12,345</span><span class="num-unit">次</span>
         </h2>
-        <!-- <heatBaiduMap></heatBaiduMap> -->
+        <heatBaiduMap></heatBaiduMap>
       </div>
 
       <div class="right-box">
