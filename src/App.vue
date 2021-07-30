@@ -1,35 +1,40 @@
 <!--
- * @Descripttion:
- * @version:
+ * @Descripttion: 
+ * @version: 
  * @Author: Caoshuangna
- * @Date: 2019-10-10 11:02:35
+ * @Date: 2021-07-22 14:46:56
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-05-15 14:50:30
- -->
+ * @LastEditTime: 2021-07-27 15:01:42
+-->
 <template>
-    <div id="app">
-      <div id="nav">
-      </div>
-      <router-view />
-    </div>
+  <div id="app">
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <router-view/>
+  </div>
 </template>
-<script>
 
-export default {
-  data () {
-    return {
-    };
-  },
-  mounted () {
-    },
-};
-</script>
-<style>
+<style lang="less">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  /* height: 100%; */
+  text-align: center;
+  color: #fff;
 }
+
+// #nav {
+//   padding: 30px;
+
+//   a {
+//     font-weight: bold;
+//     color: #2c3e50;
+
+//     &.router-link-exact-active {
+//       color: #42b983;
+//     }
+//   }
+// }
 </style>

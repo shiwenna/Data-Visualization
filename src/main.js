@@ -4,12 +4,12 @@
  * @Author: Caoshuangna
  * @Date: 2019-10-10 11:02:35
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2020-05-27 13:16:04
+ * @LastEditTime: 2021-07-23 10:03:02
  */
 import Vue from 'vue'
 import App from './App.vue'
 import '@/styles/global.less'
-import router from './router/router'
+import router from './router'
 import store from './store'
 import '@/components'
 import Axios from '@/axios'
