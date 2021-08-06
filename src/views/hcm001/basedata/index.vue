@@ -4,7 +4,7 @@
  * @Author: Caoshuangna
  * @Date: 2021-07-27 15:19:55
  * @LastEditors: Caoshuangna
- * @LastEditTime: 2021-07-30 09:12:57
+ * @LastEditTime: 2021-08-05 16:11:48
 -->
 <template>
   <div>
@@ -20,6 +20,9 @@
                                  :value="'1243'"></base-info-display-1>
             <base-info-display-1 :title="'服务老人数'"
                                  :value="'1123'"></base-info-display-1>
+            <!-- <canvas id="notHomeTopCanvas" ></canvas> -->
+            <canvas id="notHomeTopCanvas" width="420" height="200"></canvas>
+                                
           </template>
         </base-line-box-1>
         <br>
@@ -49,7 +52,7 @@
       <div class="middle-box">
         <h2>适老化改造数量<span class="title-num">12,345</span><span class="num-unit">次</span>
         </h2>
-        <heatBaiduMap></heatBaiduMap>
+        <!-- <heatBaiduMap></heatBaiduMap> -->
       </div>
 
       <div class="right-box">
@@ -90,8 +93,10 @@ import alarmNum from './alarmNum'
 import signNum from './signNum'
 import serviceNum from './serviceNum'
 import serviceCategoryNum from './serviceCategoryNum'
+// import TweenMax from '@/assets/plugins/TweenMax.min.js'
+import MyTween from '@/assets/plugins/TweenMax_MyTween.min.js'
+
 export default {
-  name: 'basedata',
   components: {
     heatBaiduMap,
     alarmNum,
@@ -109,7 +114,16 @@ export default {
 
   },
   created () {
-
+    // initCanvas('notHomeTopCanvas');
+    // start();
+    // require(['../../../assets/plugins/MyTween'], function(res) {
+    //              initCanvas('notHomeTopCanvas');
+    // start();
+    //         });
+  },
+  mounted(){
+    MyTween.initCanvas('notHomeTopCanvas');
+                MyTween.start();
   }
 }
 </script>
